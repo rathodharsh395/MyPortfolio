@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --lighting-color:#0089b7;
+    --dark-color:#013251;
+    --darker-color:#002a44;
+    --secondry-color:#fff700;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body,html{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color:white
+}
+body{
+    font-size: 1.4rem;
+}
+.container{
+    max-width: 1300px;
+    margin:0 auto;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--lighting-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--darker-color);
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+ul{
+    list-style:none;
+}
+header{
+    background:var(--lighting-color);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+nav ul{
+    display:flex;
+    gap: 1rem;
+}
+nav li{
+    font-size:1.8rem ;
+    border-bottom: 0.4rem transparent solid;
+    transition: 0.3s ease-out;
+}
+nav li:hover{
+    border-bottom: 0.4rem var(--secondry-color) solid;
+    transition: 0.3s ease-out;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+}
+#hero{
+    background:var(--dark-color);
+    padding:4rem 0;
+    border-bottom: 4px solid var(--lighting-color);
+}
+#hero .container{
+    display: flex;
+    align-items: center;
+}
+#hero .container .hero_image{
+    padding:6rem;
+}
+.hero_content{
+    display: grid;
+    place-items: center;
+}
+#hero h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.hi_text{
+    font-size: 6rem;
+    font-weight: bold;
+    color:var(--secondry-color);
+}
+.name_text{
+    font-size: 5rem;
+}
+#hero h2{
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgba(152, 93, 5, 0.958);
+
+    overflow:hidden; /*Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives the scrolling effect as the typeing happens */ 
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing{
+    from{
+        width:0
+    }
+    to{
+        width:100%
+    }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+/* Skills Sesction */
+
+#skills{
+    background: var(--dark-color);
+}
+#skills h2{
+    font-size: 6rem;
+    text-align:center;
+    padding: 2rem 0;
+}
+.skills_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap:2rem;
+}
+.grid_item{
+    display: grid;
+    place-items: center;
+}
+.card{
+    width:170px;
+    display:flex;
+    flex-direction:column;
+    border-radius: 0.5rem;
+    background: var(--dark-color) ;
+    overflow: hidden;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+.card:hover img{
+    transform: scale(1.10);
+    transition: 0.3s ease-in-out;
+    opacity:0.8;
+}
+.card:hover .card_content{
+    background: white;
+    color: var(--dark-color);
+    transform: translateY(0px);
+}
+.card_content{
+    padding:2rem;
+    position:relative;
+    top:-6.5rem;
+    margin-bottom:-6.5rem;
+    transition: 0.5 ease-in-out;
+    transform: translateY(100px);
+}
+.card_content h3{
+    text-align: center;
+    font-size:x-large;
+}
+/* Contact Section */
+#contact{
+    background: var(--dark-color);
+}
+#contact a,h2{
+    font-size:6rem;
+    text-align:center;
+}
+#contact .container{
+    height:90vh;
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+    justify-content: center;
+}
+.top_contact{
+    max-width:800px;
+    gap:4rem;
+    display: grid;
+    margin:0 auto;
+    grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+}
+.contact_way{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.contact_way a,i{
+    font-size:3rem ;
+}
+.contact_way a,h3{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.contact_way a:hover{
+    transform: scale(1.05);
+    background: var(--darker-color);
+}
+.bottom_contact{
+    max-width:400px;
+    gap:1rem;
+    display: grid;
+    margin:0 auto;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+/* footer */
+footer{
+    background: var(--darker-color) ;
+    padding:2rem;
+    color:white;
+    font-size: 1.6rem;
+    text-align: center;
+}
+/* Media Query */
+@media (max-width:786px){
+    html{
+        font-size:40%;
+    }
+    #hero .container{
+        flex-direction:column;
+    }
+    .hero_image{
+        display: grid;
+        place-items:center ;
+    }
+    #contact .container{
+        height: 70vh;
+    }
+}
+@media(max-width:500px){
+    html{
+        font-size:32%;
+    }
+    #hero .container{
+        flex-direction:column;
+    }
+    .hero_image{
+        display: grid;
+        place-items:center ;
+    }
+    #contact .container{
+        height: 50vh;
+    }
+}
